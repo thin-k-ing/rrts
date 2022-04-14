@@ -32,18 +32,21 @@ const Mayor = ({ id, name, potholes, users, logout, addCrew }) => {
 								else fixed++;
 								return (
 									<div className={`hole ${pothole.status}`}>
-										{pothole.place} {pothole.status}{" "}
-										{pothole.id} {pothole.crewId}
+										{pothole.place}
+										<span className="status">{` -${pothole.status}- `}</span>
+										<span className="id">
+											{pothole.id} {","} {pothole.crewId}
+										</span>
 									</div>
 								);
 							})}
 					</div>
 					<div className="stats">
-						<div className="stat">Pending: {pending}</div>
-						<div className="stat">WIP: {wip}</div>
-						<div className="stat">Denied: {denied}</div>
-						<div className="stat">Review: {review}</div>
-						<div className="stat">Fixed: {fixed}</div>
+						<div className="stat pending">Pending: {pending}</div>
+						<div className="stat wip">WIP: {wip}</div>
+						<div className="stat denied">Denied: {denied}</div>
+						<div className="stat review">Review: {review}</div>
+						<div className="stat fixed">Fixed: {fixed}</div>
 					</div>
 				</div>
 			</div>

@@ -48,7 +48,7 @@ function App() {
 			userName: "Work Crew 2",
 			password: "Work",
 			name: "Work Crew 2",
-			members: "10",
+			members: "21",
 			role: "crew",
 			available: true,
 		},
@@ -239,11 +239,14 @@ function App() {
 
 							// now we change the availability status of the work crew to occupied
 							users.forEach((user) => {
-								if (user.id === crewId) user.available = false;
+								if (user.id === crewId) {
+									user.available = false;
+									user.potholeId = holeId;
+								}
 							});
 						} else
 							window.alert(
-								"Window should be in initial stage (pending) to be assigned to a work crew!"
+								"Pothole should be in initial stage (pending) to be assigned to a work crew!"
 							);
 					}
 				});
@@ -264,6 +267,7 @@ function App() {
 					// get the user with pothole.crew and change its status to available
 					users.forEach((user) => {
 						if (user.id === pothole.crewId) {
+							user.potholeId = null;
 							user.available = true;
 						}
 					});

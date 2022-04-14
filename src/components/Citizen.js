@@ -50,6 +50,7 @@ const Citizen = ({ id, name, potholes, reportPothole, logout }) => {
 										place={pothole.place}
 										status={pothole.status}
 										_id={pothole._id}
+										crewId={pothole.crewId}
 									/>
 								);
 							else return null;

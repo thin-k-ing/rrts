@@ -47,7 +47,9 @@ const Inspector = ({
 									<span>
 										{pothole.place}{" "}
 										{pothole.crew && pothole.crew}{" "}
-										{pothole.status}{" "}
+										<span className="status">
+											{`-${pothole.status}-`}{" "}
+										</span>
 										<span className="id">
 											{pothole.crewId && pothole.crewId}
 										</span>
@@ -79,10 +81,12 @@ const Inspector = ({
 								>
 									<span>
 										{user.name}{" "}
-										{user.available
-											? "Available"
-											: "Working"}{" "}
-										{user.members}
+										<span className="status">
+											{user.available
+												? "-Available-"
+												: "-Working-"}{" "}
+											{user.members}
+										</span>
 									</span>
 								</div>
 							);
