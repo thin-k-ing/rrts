@@ -217,3 +217,11 @@ img {
 .idx.passive {
   background-color: #2B2E4A;
 }
+
+.currentAssignment {
+  background-color: #2B2E4A;
+  padding: 20px auto;
+  margin: 20px auto;
+  width: 60%;
+  color: white;
+}

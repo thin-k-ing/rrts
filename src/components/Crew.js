@@ -1,8 +1,11 @@
 const CurrentWork = ({ pothole, markForReview }) => {
 	return (
-		<div>
+		<div className="currentAssignment">
 			<div className="currentWork">
-				{pothole.place} {pothole.id}
+				<p>Current Pothole Assigned (Place, CitizenID)</p>
+				<p>
+					{pothole.place} <span className="id">{pothole.id}</span>
+				</p>
 			</div>
 			<div
 				className="btn"
@@ -59,7 +62,7 @@ const Crew = ({ id, name, potholes, users, logout, markForReview }) => {
 				</div>
 			</div>
 			<div className="bottomContainer">
-				<div className="idx">Fixed Potholes (Place)</div>
+				<div className="idx">Fixed Potholes (Place, CitizenID)</div>
 				<div className="fixedHoles">
 					{potholes
 						.slice()
@@ -69,7 +72,10 @@ const Crew = ({ id, name, potholes, users, logout, markForReview }) => {
 							else if (pothole.status !== "fixed") return null;
 							else
 								return (
-									<div className="hole">{pothole.place}</div>
+									<div className="hole fixed">
+										{pothole.place}{" "}
+										<span className="id">{pothole.id}</span>
+									</div>
 								);
 						})}
 				</div>

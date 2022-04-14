@@ -7,6 +7,7 @@ import Citizen from "./components/Citizen";
 import { v4 as uuidv4 } from "uuid";
 import Inspector from "./components/Inspector";
 import Crew from "./components/Crew";
+import Mayor from "./components/Mayor";
 
 function App() {
 	const [page, setPage] = useState(0);
@@ -57,6 +58,13 @@ function App() {
 			password: "Inspector 1",
 			name: "Inspector 1",
 			role: "inspector",
+		},
+		{
+			id: uuidv4(),
+			userName: "Mayor",
+			password: "Mayor",
+			name: "Mayor",
+			role: "mayor",
 		},
 	]);
 
@@ -143,6 +151,17 @@ function App() {
 				/>
 			);
 		}
+
+		if (page === 10)
+			return (
+				<Mayor
+					id={user.id}
+					name={user.name}
+					potholes={potholes}
+					users={users}
+					logout={logout}
+				/>
+			);
 	}
 
 	const logout = () => {
@@ -151,10 +170,10 @@ function App() {
 
 	const [user, setUser] = useState();
 
-	function handleLogin(userName) {
+	function handleLogin(userName, password) {
 		let userValid = false;
 		users.forEach((user) => {
-			if (user.name === userName) {
+			if (user.name === userName && user.password === password) {
 				setUser(user);
 				userValid = true;
 				if (user.role === "citizen") {
@@ -167,6 +186,8 @@ function App() {
 				if (user.role === "crew") setPage(6);
 
 				if (user.role === "admin") setPage(8);
+
+				if (user.role === "mayor") setPage(10);
 				return;
 			}
 		});
@@ -293,8 +314,8 @@ function App() {
 				});
 				return prevUsers;
 			});
+			window.alert("New Crew Added!");
 		}
-		console.log(users);
 	};
 
 	return (

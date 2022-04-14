@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const LoginPage = (props) => {
 	const [userName, setUserName] = useState("");
+	const [pwd, setPwd] = useState("");
 	return (
 		<div className="loginPage">
 			<form action="/">
@@ -13,6 +14,14 @@ const LoginPage = (props) => {
 						setUserName(event.target.value);
 					}}
 				/>
+				<input
+					className="userName loginInfo"
+					type="password"
+					placeholder="Password"
+					onChange={(event) => {
+						setPwd(event.target.value);
+					}}
+				/>
 				{props.loginError && (
 					<div className="loginError">User not found!</div>
 				)}
@@ -20,7 +29,7 @@ const LoginPage = (props) => {
 			<div
 				className="btn"
 				onClick={() => {
-					props.handleLogin(userName);
+					props.handleLogin(userName, pwd);
 				}}
 			>
 				Login

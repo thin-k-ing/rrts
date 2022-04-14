@@ -40,7 +40,7 @@ const Inspector = ({
 									}}
 									style={
 										holeId === pothole._id
-											? { border: "2px solid black" }
+											? { border: "2px solid yellow" }
 											: null
 									}
 								>
