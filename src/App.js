@@ -1,6 +1,6 @@
 import Header from "./components/header";
 import Welcome from "./components/Welcome";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Admin from "./components/Admin";
 import LoginPage from "./components/LoginPage";
 import Citizen from "./components/Citizen";
