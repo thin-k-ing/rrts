@@ -30,6 +30,7 @@ const Citizen = ({ id, name, potholes, reportPothole, logout }) => {
 							if (place !== "") reportPothole(id, place);
 							else window.alert("Please enter the place!");
 						}}
+						style={{ padding: "10px 0px" }}
 					>
 						Report
 					</div>

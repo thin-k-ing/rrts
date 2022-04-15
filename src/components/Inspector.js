@@ -81,6 +81,7 @@ const Inspector = ({
 								>
 									<span>
 										{user.name}{" "}
+										<span className="id">{user.id}</span>
 										<span className="status">
 											{user.available
 												? "-Available-"
