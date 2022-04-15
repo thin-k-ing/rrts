@@ -1,3 +1,15 @@
+# TO RUN THIS PROJECT AFTER DOWNLOADING THE ZIP
+
+Unzip the file to get the Project Folder
+CD over to the project folder in the terminal then, type in the following commands:
+
+    Install all the required dependencies
+    npm install
+
+    Run the project with on the local development server
+    npm start
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
