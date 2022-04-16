@@ -1,14 +1,39 @@
+# TO RUN THIS PROJECT ONLINE VISIT
+   https://clinquant-shortbread-de68b4.netlify.app/
+
 # TO RUN THIS PROJECT AFTER DOWNLOADING THE ZIP
 
 Unzip the file to get the Project Folder
 CD over to the project folder in the terminal then, type in the following commands:
 
-    Install all the required dependencies
     npm install
-
-    Run the project with on the local development server
     npm start
+    
+# Accounts Available for Use (Crews can be added via an Admin Account)
 
+    Username, Password
+
+    Citizen Accounts:
+    
+    Rishabh, Rishabh
+    Citizen 1, Citizen 1
+    
+    Inspector Account:
+    
+    Inspector 1, Inspector 1
+    
+    Work Crew Accounts:
+    
+    Work Crew 1, Work
+    Work Crew 2, Work
+    
+    Administrator Accounts
+    
+    Admin 1, Admin 1
+    
+    Mayor Accounts:
+    
+    Mayor, Mayor
 
 # Getting Started with Create React App
 
